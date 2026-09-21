@@ -1,0 +1,21 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {"const": "0.2"},
+    "skill": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "mode": {"enum": ["verified", "offline"]},
+    "language": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "budget_hours": {"type": "number", "exclusiveMinimum": 0},
+    "buffer_hours": {"type": "number", "minimum": 0},
+    "max_core_resources": {"type": "integer", "minimum": 1},
+    "capabilities": {"type": "array", "items": {"type": "object", "properties": {"id": {"type": "string", "pattern": "^[a-z0-9]+(?:[-_][a-z0-9]+)*$"}, "title": {"type": "string", "minLength": 1, "pattern": "\\S"}, "requires": {"type": "array", "items": {"type": "string", "pattern": "^[a-z0-9]+(?:[-_][a-z0-9]+)*$"}, "uniqueItems": true}, "required": {"type": "boolean"}}, "required": ["id", "title", "requires", "required"], "additionalProperties": false}, "minItems": 1},
+    "known_capabilities": {"type": "array", "items": {"type": "string", "pattern": "^[a-z0-9]+(?:[-_][a-z0-9]+)*$"}, "uniqueItems": true},
+    "selected_resource_ids": {"type": "array", "items": {"type": "string", "pattern": "^[a-z0-9]+(?:[-_][a-z0-9]+)*$"}, "uniqueItems": true, "minItems": 1},
+    "lessons": {"type": "array", "items": {"type": "object", "properties": {"id": {"type": "string", "pattern": "^[a-z0-9]+(?:[-_][a-z0-9]+)*$"}, "title": {"type": "string", "minLength": 1, "pattern": "\\S"}, "kind": {"enum": ["guided", "independent", "transfer", "review"]}, "capabilities": {"type": "array", "items": {"type": "string", "pattern": "^[a-z0-9]+(?:[-_][a-z0-9]+)*$"}, "uniqueItems": true, "minItems": 1}, "resource_ids": {"type": "array", "items": {"type": "string", "pattern": "^[a-z0-9]+(?:[-_][a-z0-9]+)*$"}, "uniqueItems": true}, "section_refs": {"type": "array", "items": {"type": "object", "properties": {"resource_id": {"type": "string", "pattern": "^[a-z0-9]+(?:[-_][a-z0-9]+)*$"}, "section_id": {"type": "string", "pattern": "^[a-z0-9]+(?:[-_][a-z0-9]+)*$"}}, "required": ["resource_id", "section_id"], "additionalProperties": false}, "minItems": 0, "uniqueItems": true}, "hours": {"type": "object", "properties": {"input": {"type": "number", "minimum": 0}, "practice": {"type": "number", "minimum": 0}, "assessment": {"type": "number", "minimum": 0}}, "required": ["input", "practice", "assessment"], "additionalProperties": false}, "exercise": {"type": "string", "minLength": 1, "pattern": "\\S"}, "output": {"type": "string", "minLength": 1, "pattern": "\\S"}, "exit_criteria": {"type": "array", "items": {"type": "string", "minLength": 1, "pattern": "\\S"}, "minItems": 1, "uniqueItems": true}}, "required": ["id", "title", "kind", "capabilities", "resource_ids", "section_refs", "hours", "exercise", "output", "exit_criteria"], "additionalProperties": false}, "minItems": 1},
+    "notes": {"type": "string"}
+  },
+  "required": ["schema_version", "skill", "mode", "language", "budget_hours", "buffer_hours", "capabilities", "known_capabilities", "selected_resource_ids", "lessons"],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Learn Any Skill curriculum plan v0.2"
+}

@@ -1,0 +1,49 @@
+name: validate
+
+"on":
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: ${{ matrix.os }} / Python ${{ matrix.python }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+            python: "3.10"
+          - os: ubuntu-latest
+            python: "3.13"
+          - os: ubuntu-latest
+            python: "3.14"
+          - os: windows-latest
+            python: "3.13"
+    env:
+      PYTHONUTF8: "1"
+      PYTHONIOENCODING: "utf-8"
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install validation dependencies
+        run: python -m pip install -r requirements-dev.txt
+      - name: Validate packaging and schemas
+        run: python scripts/validate_repo.py . --allow-directory-name-mismatch
+      - name: Run helper regression tests
+        run: python -m unittest discover -s tests -v
+      - name: Run the teaching lab
+        run: python -m unittest discover -s examples/python-testing/lab -v
+      - name: Validate the complete example plan
+        run: python scripts/validate_plan.py examples/python-testing/plan.json --resources examples/python-testing/resources.json --json
+      - name: Exercise backward-compatible scoring CLI
+        run: python scripts/score_resources.py examples/resources.example.json --json

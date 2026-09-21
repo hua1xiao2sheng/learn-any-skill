@@ -1,0 +1,17 @@
+{
+  "skill": "Python unit testing for small data-processing functions",
+  "outcome": "Independently test a small data-processing function and an injected dependency.",
+  "baseline": [
+    "Python functions and running scripts (assumed for this example, not assessed on a real learner)"
+  ],
+  "budget_hours": 4,
+  "language": "zh-CN",
+  "constraints": {
+    "free_only": true,
+    "hardware": "CPU only",
+    "network": "Not needed to execute the lab"
+  },
+  "assumptions": [
+    "Time estimates are illustrative and should be recalibrated after lesson 1."
+  ]
+}

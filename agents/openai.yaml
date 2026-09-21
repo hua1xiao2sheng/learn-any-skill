@@ -1,0 +1,6 @@
+interface:
+  display_name: "Learn Any Skill"
+  short_description: "Curate courses, build lessons, and track learning"
+  default_prompt: "Use $learn-any-skill to turn my learning goal into a source-grounded curriculum with focused resources, practical lessons, and observable mastery checks."
+policy:
+  allow_implicit_invocation: true

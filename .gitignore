@@ -1,0 +1,25 @@
+# Python / local environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+# Private learning outputs; keep outside the installed skill when possible
+.learning/
+learning-output/
+# Secrets and local machine files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+# Build output
+*.zip
+dist/

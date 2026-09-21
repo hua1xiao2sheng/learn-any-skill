@@ -1,0 +1,15 @@
+name: Feature request / 改进建议
+description: Suggest a focused improvement to the learning workflow.
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Learning problem / 要解决的学习问题
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior and success check / 建议行为与验收方式
+    validations:
+      required: true

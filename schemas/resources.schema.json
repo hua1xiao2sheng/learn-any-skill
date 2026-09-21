@@ -1,0 +1,55 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {"const": "0.2"},
+    "is_fixture": {"type": "boolean"},
+    "weights": {"type": "object", "properties": {
+      "authority": {"type": "number", "minimum": 0},
+      "relevance": {"type": "number", "minimum": 0},
+      "practicality": {"type": "number", "minimum": 0},
+      "currency": {"type": "number", "minimum": 0},
+      "learner_fit": {"type": "number", "minimum": 0},
+      "accessibility": {"type": "number", "minimum": 0}
+    }, "required": [], "additionalProperties": false},
+    "resources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z0-9]+(?:[-_][a-z0-9]+)*$"},
+          "name": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "type": {"enum": ["docs","course","paper","github","video","blog","local"]},
+          "role": {"enum": ["core","practice","optional","skip"]},
+          "url": {"type": "string", "pattern": "^(https?://[^\\s]+|repo:[^\\s]+)$"},
+          "access": {"enum": ["free","paid","mixed","unknown","local"]},
+          "covers": {"type": "array", "items": {"type": "string", "pattern": "^[a-z0-9]+(?:[-_][a-z0-9]+)*$"}, "uniqueItems": true},
+          "verification": {
+            "type": "object",
+            "properties": {
+              "status": {"enum": ["content-verified","metadata-only","unverified","local"]},
+              "checked_at": {"anyOf": [{"type":"string","format":"date","pattern":"^\\d{4}-\\d{2}-\\d{2}$"},{"type":"null"}]},
+              "evidence": {"type":"string"},
+              "evidence_url": {"type":"string","pattern":"^(https?://[^\\s]+|repo:[^\\s]+)$"},
+              "limitations": {"type":"string"}
+            },
+            "required": ["status","checked_at","evidence"],
+            "additionalProperties": false,
+            "allOf": [{"if":{"properties":{"status":{"enum":["content-verified","metadata-only","local"]}}},"then":{"properties":{"checked_at":{"type":"string","format":"date","pattern":"^\\d{4}-\\d{2}-\\d{2}$"},"evidence":{"type":"string","minLength":1,"pattern":"\\S"}}}}]
+          },
+          "sections": {"type":"array","items":{"type":"object","properties":{"id":{"type":"string","pattern":"^[a-z0-9]+(?:[-_][a-z0-9]+)*$"},"title":{"type":"string","minLength":1,"pattern":"\\S"},"locator":{"type":"string","pattern":"^(https?://[^\\s]+|repo:[^\\s]+)$"},"verified":{"type":"boolean"}},"required":["id","title","locator","verified"],"additionalProperties":false},"minItems":0},
+          "scores": {"type":"object","properties":{"authority":{"type":"number","minimum":0,"maximum":5},"relevance":{"type":"number","minimum":0,"maximum":5},"practicality":{"type":"number","minimum":0,"maximum":5},"currency":{"type":"number","minimum":0,"maximum":5},"learner_fit":{"type":"number","minimum":0,"maximum":5},"accessibility":{"type":"number","minimum":0,"maximum":5}},"required":["authority","relevance","practicality","currency","learner_fit","accessibility"],"additionalProperties":false},
+          "score_reasons": {"type":"object","properties":{"authority":{"type":"string","minLength":1,"pattern":"\\S"},"relevance":{"type":"string","minLength":1,"pattern":"\\S"},"practicality":{"type":"string","minLength":1,"pattern":"\\S"},"currency":{"type":"string","minLength":1,"pattern":"\\S"},"learner_fit":{"type":"string","minLength":1,"pattern":"\\S"},"accessibility":{"type":"string","minLength":1,"pattern":"\\S"}},"required":["authority","relevance","practicality","currency","learner_fit","accessibility"],"additionalProperties":false},
+          "notes": {"type":"string"},
+          "total_score": {"type":"number","minimum":0,"maximum":100}
+        },
+        "required": ["id","name","type","role","url","access","covers","verification","sections"],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "required": ["schema_version","resources"],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Learn Any Skill resource ledger v0.2"
+}

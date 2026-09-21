@@ -1,0 +1,65 @@
+{
+  "release": "0.2.0",
+  "audit_date": "2026-09-21",
+  "environment": {
+    "python": "3.13.5",
+    "platform": "Linux",
+    "implementation": "CPython"
+  },
+  "original_archive_sha256": "62707180a165cdc6814e9b34edacd39cea1971abc692b6629be5f8d4e3377c54",
+  "checks": {
+    "regression_tests": {
+      "passed": 98,
+      "failed": 0,
+      "status": "executed locally"
+    },
+    "teaching_lab_tests": {
+      "passed": 12,
+      "failed": 0,
+      "status": "executed locally"
+    },
+    "python_310_syntax_parse": {
+      "files": 10,
+      "status": "passed (syntax only, not execution on Python 3.10)"
+    },
+    "example_plan": {
+      "lessons": 3,
+      "required_capabilities_covered": 3,
+      "required_capabilities": 3,
+      "total_hours_including_buffer": 4.0,
+      "budget_hours": 4.0
+    },
+    "schema_examples": 5
+  },
+  "not_executed": [
+    "GitHub-hosted CI matrix",
+    "Codex/other host live end-to-end skill execution",
+    "Manual model behavior evaluation cases",
+    "Controlled learner effectiveness study",
+    "Remote publishing or plugin-directory registration"
+  ],
+  "changed_original_files": [
+    "README.md",
+    "SKILL.md",
+    "scripts/score_resources.py",
+    "references/resource-rubric.md",
+    "references/output-contract.md",
+    "references/curriculum-design.md",
+    "agents/openai.yaml",
+    "examples/resources.example.json",
+    ".github/workflows/validate.yml"
+  ],
+  "unchanged_original_files": [
+    "LICENSE"
+  ],
+  "external_documentation_checked": [
+    "https://learn.chatgpt.com/docs/build-skills",
+    "https://agentskills.io/specification",
+    "https://docs.python.org/3/library/unittest.html",
+    "https://docs.python.org/3/library/unittest.mock.html",
+    "https://docs.github.com/en/get-started/start-your-journey/creating-a-repository-for-your-project-on-github",
+    "https://github.com/actions/checkout",
+    "https://github.com/actions/setup-python"
+  ],
+  "limitations": "Automated checks validate code and declared structure, not factual source truth, learning outcomes, or universal host behavior."
+}

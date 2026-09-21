@@ -1,0 +1,102 @@
+{
+  "schema_version": "0.2",
+  "is_fixture": false,
+  "resources": [
+    {
+      "id": "r-unittest",
+      "name": "Python unittest documentation",
+      "type": "docs",
+      "role": "core",
+      "url": "https://docs.python.org/3/library/unittest.html",
+      "access": "free",
+      "covers": [
+        "c-test",
+        "c-boundaries"
+      ],
+      "verification": {
+        "status": "content-verified",
+        "checked_at": "2026-09-21",
+        "evidence": "Opened Basic example, command-line discovery, and assertRaises documentation; they describe TestCase assertions, discovery, and expected exception checks.",
+        "limitations": "Only the listed sections were inspected for this course. No claim that the whole documentation was read."
+      },
+      "sections": [
+        {
+          "id": "basic",
+          "title": "Basic example",
+          "locator": "https://docs.python.org/3/library/unittest.html#basic-example",
+          "verified": true
+        },
+        {
+          "id": "discovery",
+          "title": "Test Discovery",
+          "locator": "https://docs.python.org/3/library/unittest.html#test-discovery",
+          "verified": true
+        },
+        {
+          "id": "raises",
+          "title": "unittest.TestCase.assertRaises",
+          "locator": "https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertRaises",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "r-mock",
+      "name": "Python unittest.mock documentation",
+      "type": "docs",
+      "role": "core",
+      "url": "https://docs.python.org/3/library/unittest.mock.html",
+      "access": "free",
+      "covers": [
+        "c-isolation"
+      ],
+      "verification": {
+        "status": "content-verified",
+        "checked_at": "2026-09-21",
+        "evidence": "Opened The Mock Class and return_value, side_effect, and assert_called_once_with documentation. These support controlled dependency outputs and checking the invocation.",
+        "limitations": "This course does not cover patch decorators, async mocks, or integration-test realism."
+      },
+      "sections": [
+        {
+          "id": "mock-class",
+          "title": "The Mock Class",
+          "locator": "https://docs.python.org/3/library/unittest.mock.html#the-mock-class",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "id": "r-lab",
+      "name": "Original score-normalization practice lab",
+      "type": "local",
+      "role": "practice",
+      "url": "repo:lab/normalize_scores.py",
+      "access": "local",
+      "covers": [
+        "c-test",
+        "c-boundaries",
+        "c-isolation"
+      ],
+      "verification": {
+        "status": "local",
+        "checked_at": "2026-09-21",
+        "evidence": "Original bundled implementation contains normalize_scores and mean_from_loader; the companion tests exercise normal inputs, invalid values, and an injected loader.",
+        "limitations": "A teaching-scale lab, not a production data-validation library."
+      },
+      "sections": [
+        {
+          "id": "normalize",
+          "title": "normalize_scores",
+          "locator": "repo:lab/normalize_scores.py",
+          "verified": true
+        },
+        {
+          "id": "loader",
+          "title": "mean_from_loader",
+          "locator": "repo:lab/normalize_scores.py",
+          "verified": true
+        }
+      ]
+    }
+  ]
+}

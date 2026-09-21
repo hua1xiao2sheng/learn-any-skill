@@ -1,0 +1,27 @@
+{
+  "schema_version": "0.2",
+  "course_id": "python-testing-demo",
+  "updated_at": null,
+  "current_lesson_id": "l01",
+  "lesson_status": [
+    {
+      "lesson_id": "l01",
+      "status": "not_started",
+      "assistance": "not_assessed",
+      "evidence": []
+    },
+    {
+      "lesson_id": "l02",
+      "status": "not_started",
+      "assistance": "not_assessed",
+      "evidence": []
+    },
+    {
+      "lesson_id": "l03",
+      "status": "not_started",
+      "assistance": "not_assessed",
+      "evidence": []
+    }
+  ],
+  "next_action": "Read lessons/01-first-test.md. No learner has been assessed by this example checkpoint."
+}

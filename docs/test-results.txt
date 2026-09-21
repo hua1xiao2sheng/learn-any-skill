@@ -1,0 +1,128 @@
+Local execution report — 2026-09-21
+Python 3.13.5 / Linux
+
+COMMAND: python -m unittest discover -s tests -v
+
+test_absolute_windows_path_rejected (test_plan.PlanTests.test_absolute_windows_path_rejected) ... ok
+test_boolean_budget_rejected (test_plan.PlanTests.test_boolean_budget_rejected) ... ok
+test_boolean_resource_limit_rejected (test_plan.PlanTests.test_boolean_resource_limit_rejected) ... ok
+test_budget_includes_buffer (test_plan.PlanTests.test_budget_includes_buffer) ... ok
+test_claimed_verification_needs_evidence (test_plan.PlanTests.test_claimed_verification_needs_evidence) ... ok
+test_cli_error_json_returns_two (test_plan.PlanTests.test_cli_error_json_returns_two) ... ok
+test_cli_valid_from_another_directory (test_plan.PlanTests.test_cli_valid_from_another_directory) ... ok
+test_complete_plan_is_valid (test_plan.PlanTests.test_complete_plan_is_valid) ... ok
+test_core_resource_limit_enforced (test_plan.PlanTests.test_core_resource_limit_enforced) ... ok
+test_dependency_cycle_rejected (test_plan.PlanTests.test_dependency_cycle_rejected) ... ok
+test_duplicate_capability_id_rejected (test_plan.PlanTests.test_duplicate_capability_id_rejected) ... ok
+test_duplicate_lesson_id_rejected (test_plan.PlanTests.test_duplicate_lesson_id_rejected) ... ok
+test_duplicate_resource_id_rejected (test_plan.PlanTests.test_duplicate_resource_id_rejected) ... ok
+test_duplicate_section_reference_rejected (test_plan.PlanTests.test_duplicate_section_reference_rejected) ... ok
+test_empty_mastery_gate_rejected (test_plan.PlanTests.test_empty_mastery_gate_rejected) ... ok
+test_future_check_date_rejected (test_plan.PlanTests.test_future_check_date_rejected) ... ok
+test_http_credentials_rejected (test_plan.PlanTests.test_http_credentials_rejected) ... ok
+test_invalid_calendar_date_rejected (test_plan.PlanTests.test_invalid_calendar_date_rejected) ... ok
+test_known_capability_can_be_skipped (test_plan.PlanTests.test_known_capability_can_be_skipped) ... ok
+test_local_evidence_cannot_impersonate_remote (test_plan.PlanTests.test_local_evidence_cannot_impersonate_remote) ... ok
+test_local_path_traversal_rejected (test_plan.PlanTests.test_local_path_traversal_rejected) ... ok
+test_metadata_only_cannot_support_verified_plan (test_plan.PlanTests.test_metadata_only_cannot_support_verified_plan) ... ok
+test_missing_local_file_rejected (test_plan.PlanTests.test_missing_local_file_rejected) ... ok
+test_missing_required_capability_rejected (test_plan.PlanTests.test_missing_required_capability_rejected) ... ok
+test_missing_section_rejected (test_plan.PlanTests.test_missing_section_rejected) ... ok
+test_negative_hours_rejected (test_plan.PlanTests.test_negative_hours_rejected) ... ok
+test_no_declared_coverage_rejected (test_plan.PlanTests.test_no_declared_coverage_rejected) ... ok
+test_no_independent_work_produces_warning (test_plan.PlanTests.test_no_independent_work_produces_warning) ... ok
+test_no_mutation (test_plan.PlanTests.test_no_mutation) ... ok
+test_no_practice_produces_warning (test_plan.PlanTests.test_no_practice_produces_warning) ... ok
+test_nonfinite_hours_rejected (test_plan.PlanTests.test_nonfinite_hours_rejected) ... ok
+test_offline_provisional_resource_is_labeled (test_plan.PlanTests.test_offline_provisional_resource_is_labeled) ... ok
+test_out_of_order_lessons_rejected (test_plan.PlanTests.test_out_of_order_lessons_rejected) ... ok
+test_skipped_resource_cannot_be_selected (test_plan.PlanTests.test_skipped_resource_cannot_be_selected) ... ok
+test_unknown_dependency_rejected (test_plan.PlanTests.test_unknown_dependency_rejected) ... ok
+test_unknown_known_capability_rejected (test_plan.PlanTests.test_unknown_known_capability_rejected) ... ok
+test_unknown_selected_resource_rejected (test_plan.PlanTests.test_unknown_selected_resource_rejected) ... ok
+test_unknown_top_level_field_rejected (test_plan.PlanTests.test_unknown_top_level_field_rejected) ... ok
+test_unused_selected_resource_rejected (test_plan.PlanTests.test_unused_selected_resource_rejected) ... ok
+test_unverified_resource_cannot_support_verified_plan (test_plan.PlanTests.test_unverified_resource_cannot_support_verified_plan) ... ok
+test_unverified_section_rejected (test_plan.PlanTests.test_unverified_section_rejected) ... ok
+test_zero_time_lesson_rejected (test_plan.PlanTests.test_zero_time_lesson_rejected) ... ok
+test_explicit_archive_audit_can_ignore_directory_name (test_repository.RepositoryTests.test_explicit_archive_audit_can_ignore_directory_name) ... ok
+test_fenced_example_is_not_treated_as_real_link (test_repository.RepositoryTests.test_fenced_example_is_not_treated_as_real_link) ... ok
+test_frontmatter_accepts_current_skill (test_repository.RepositoryTests.test_frontmatter_accepts_current_skill) ... ok
+test_frontmatter_rejects_directory_mismatch (test_repository.RepositoryTests.test_frontmatter_rejects_directory_mismatch) ... ok
+test_frontmatter_rejects_empty_description (test_repository.RepositoryTests.test_frontmatter_rejects_empty_description) ... ok
+test_frontmatter_rejects_invalid_name (test_repository.RepositoryTests.test_frontmatter_rejects_invalid_name) ... ok
+test_frontmatter_rejects_missing_delimiter (test_repository.RepositoryTests.test_frontmatter_rejects_missing_delimiter) ... ok
+test_frontmatter_rejects_nonstring_metadata (test_repository.RepositoryTests.test_frontmatter_rejects_nonstring_metadata) ... ok
+test_frontmatter_rejects_unclosed_header (test_repository.RepositoryTests.test_frontmatter_rejects_unclosed_header) ... ok
+test_progress_initial_state_is_not_mastery (test_repository.RepositoryTests.test_progress_initial_state_is_not_mastery) ... ok
+test_progress_rejects_duplicate_lesson (test_repository.RepositoryTests.test_progress_rejects_duplicate_lesson) ... ok
+test_progress_rejects_pass_without_evidence (test_repository.RepositoryTests.test_progress_rejects_pass_without_evidence) ... ok
+test_progress_rejects_unknown_current_lesson (test_repository.RepositoryTests.test_progress_rejects_unknown_current_lesson) ... ok
+test_progress_schema_rejects_false_pass (test_repository.RepositoryTests.test_progress_schema_rejects_false_pass) ... ok
+test_relative_markdown_link_is_checked (test_repository.RepositoryTests.test_relative_markdown_link_is_checked) ... ok
+test_repository_is_consistent (test_repository.RepositoryTests.test_repository_is_consistent) ... ok
+test_schemas_reject_boolean_numeric_scores (test_repository.RepositoryTests.test_schemas_reject_boolean_numeric_scores) ... ok
+test_yaml_cannot_construct_python_objects (test_repository.RepositoryTests.test_yaml_cannot_construct_python_objects) ... ok
+test_yaml_rejects_duplicate_keys (test_repository.RepositoryTests.test_yaml_rejects_duplicate_keys) ... ok
+test_bad_names_are_rejected (test_scoring.ScoringTests.test_bad_names_are_rejected) ... ok
+test_bad_weight_container_is_rejected_even_when_falsy (test_scoring.ScoringTests.test_bad_weight_container_is_rejected_even_when_falsy) ... ok
+test_boolean_scores_are_rejected (test_scoring.ScoringTests.test_boolean_scores_are_rejected) ... ok
+test_boolean_weights_are_rejected (test_scoring.ScoringTests.test_boolean_weights_are_rejected) ... ok
+test_cli_invalid_input_exits_two_without_traceback (test_scoring.ScoringTests.test_cli_invalid_input_exits_two_without_traceback) ... ok
+test_cli_json_runs_from_different_working_directory (test_scoring.ScoringTests.test_cli_json_runs_from_different_working_directory) ... ok
+test_default_weights_sum_to_one (test_scoring.ScoringTests.test_default_weights_sum_to_one) ... ok
+test_empty_mapping_means_default_weights (test_scoring.ScoringTests.test_empty_mapping_means_default_weights) ... ok
+test_empty_resources_and_bad_top_levels_are_rejected (test_scoring.ScoringTests.test_empty_resources_and_bad_top_levels_are_rejected) ... ok
+test_enormous_integer_weight_has_readable_error (test_scoring.ScoringTests.test_enormous_integer_weight_has_readable_error) ... ok
+test_inputs_are_not_mutated (test_scoring.ScoringTests.test_inputs_are_not_mutated) ... ok
+test_large_finite_weights_do_not_overflow (test_scoring.ScoringTests.test_large_finite_weights_do_not_overflow) ... ok
+test_legacy_array_input (test_scoring.ScoringTests.test_legacy_array_input) ... ok
+test_markdown_escapes_html_pipe_and_newline (test_scoring.ScoringTests.test_markdown_escapes_html_pipe_and_newline) ... ok
+test_missing_score_is_rejected (test_scoring.ScoringTests.test_missing_score_is_rejected) ... ok
+test_negative_weight_is_rejected (test_scoring.ScoringTests.test_negative_weight_is_rejected) ... ok
+test_nonfinite_scores_are_rejected (test_scoring.ScoringTests.test_nonfinite_scores_are_rejected) ... ok
+test_nonfinite_weights_are_rejected (test_scoring.ScoringTests.test_nonfinite_weights_are_rejected) ... ok
+test_original_fixture_order_and_values (test_scoring.ScoringTests.test_original_fixture_order_and_values) ... ok
+test_out_of_range_score_is_rejected (test_scoring.ScoringTests.test_out_of_range_score_is_rejected) ... ok
+test_partial_custom_weights_are_merged_then_normalized (test_scoring.ScoringTests.test_partial_custom_weights_are_merged_then_normalized) ... ok
+test_preserves_schema_and_fixture_metadata (test_scoring.ScoringTests.test_preserves_schema_and_fixture_metadata) ... ok
+test_random_valid_scores_stay_in_range (test_scoring.ScoringTests.test_random_valid_scores_stay_in_range) ... ok
+test_rank_uses_unrounded_scores (test_scoring.ScoringTests.test_rank_uses_unrounded_scores) ... ok
+test_ranked_ledger_still_matches_its_schema (test_scoring.ScoringTests.test_ranked_ledger_still_matches_its_schema) ... ok
+test_ties_preserve_input_order (test_scoring.ScoringTests.test_ties_preserve_input_order) ... ok
+test_unknown_score_is_rejected (test_scoring.ScoringTests.test_unknown_score_is_rejected) ... ok
+test_unknown_weight_is_rejected (test_scoring.ScoringTests.test_unknown_weight_is_rejected) ... ok
+test_zero_total_weights_are_rejected (test_scoring.ScoringTests.test_zero_total_weights_are_rejected) ... ok
+test_accepts_utf8_bom_and_chinese (test_scoring.StrictJsonTests.test_accepts_utf8_bom_and_chinese) ... ok
+test_directory_is_readable_error (test_scoring.StrictJsonTests.test_directory_is_readable_error) ... ok
+test_missing_file_is_readable_error (test_scoring.StrictJsonTests.test_missing_file_is_readable_error) ... ok
+test_numeric_string_is_not_silently_coerced (test_scoring.StrictJsonTests.test_numeric_string_is_not_silently_coerced) ... ok
+test_rejects_duplicate_keys (test_scoring.StrictJsonTests.test_rejects_duplicate_keys) ... ok
+test_rejects_float_overflow_literal (test_scoring.StrictJsonTests.test_rejects_float_overflow_literal) ... ok
+test_rejects_invalid_encoding (test_scoring.StrictJsonTests.test_rejects_invalid_encoding) ... ok
+test_rejects_nonstandard_numeric_constants (test_scoring.StrictJsonTests.test_rejects_nonstandard_numeric_constants) ... ok
+
+----------------------------------------------------------------------
+Ran 98 tests in 3.217s
+
+OK
+
+COMMAND: python -m unittest discover -s examples/python-testing/lab -v
+
+test_boolean (test_normalize_scores.NormalizeTests.test_boolean) ... ok
+test_boundaries (test_normalize_scores.NormalizeTests.test_boundaries) ... ok
+test_empty (test_normalize_scores.NormalizeTests.test_empty) ... ok
+test_fraction (test_normalize_scores.NormalizeTests.test_fraction) ... ok
+test_input_unchanged (test_normalize_scores.NormalizeTests.test_input_unchanged) ... ok
+test_loader (test_normalize_scores.NormalizeTests.test_loader) ... ok
+test_loader_error (test_normalize_scores.NormalizeTests.test_loader_error) ... ok
+test_nonfinite (test_normalize_scores.NormalizeTests.test_nonfinite) ... ok
+test_normal_input (test_normalize_scores.NormalizeTests.test_normal_input) ... ok
+test_out_of_range (test_normalize_scores.NormalizeTests.test_out_of_range) ... ok
+test_string (test_normalize_scores.NormalizeTests.test_string) ... ok
+test_wrong_container (test_normalize_scores.NormalizeTests.test_wrong_container) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.001s
+
+OK

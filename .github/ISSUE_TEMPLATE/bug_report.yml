@@ -1,0 +1,24 @@
+name: Bug report / 问题反馈
+description: Report a reproducible skill or helper problem without personal data.
+title: "[Bug] "
+body:
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment / 使用环境
+      description: Host, model, operating system, Python version, skill version, and available tools.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction / 复现步骤
+      description: Include a minimal prompt or command; remove private data and credentials.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected vs actual / 预期与实际结果
+    validations:
+      required: true

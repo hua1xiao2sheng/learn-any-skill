@@ -1,0 +1,78 @@
+{
+  "schema_version": "0.2",
+  "is_fixture": true,
+  "resources": [
+    {
+      "id": "fixture-docs",
+      "name": "Official documentation (synthetic)",
+      "type": "docs",
+      "role": "core",
+      "url": "https://example.com/docs",
+      "access": "unknown",
+      "covers": [],
+      "verification": {
+        "status": "unverified",
+        "checked_at": null,
+        "evidence": "Synthetic arithmetic fixture, not a real recommendation."
+      },
+      "sections": [],
+      "scores": {
+        "authority": 5,
+        "relevance": 5,
+        "practicality": 3,
+        "currency": 5,
+        "learner_fit": 4,
+        "accessibility": 5
+      },
+      "notes": "Scores are manufactured test inputs, not observed resource quality."
+    },
+    {
+      "id": "fixture-project",
+      "name": "Hands-on reference project (synthetic)",
+      "type": "github",
+      "role": "practice",
+      "url": "https://example.com/project",
+      "access": "unknown",
+      "covers": [],
+      "verification": {
+        "status": "unverified",
+        "checked_at": null,
+        "evidence": "Synthetic arithmetic fixture, not a real recommendation."
+      },
+      "sections": [],
+      "scores": {
+        "authority": 4,
+        "relevance": 5,
+        "practicality": 5,
+        "currency": 4,
+        "learner_fit": 4,
+        "accessibility": 5
+      },
+      "notes": "Scores are manufactured test inputs, not observed resource quality."
+    },
+    {
+      "id": "fixture-course",
+      "name": "Long general course (synthetic)",
+      "type": "course",
+      "role": "optional",
+      "url": "https://example.com/course",
+      "access": "unknown",
+      "covers": [],
+      "verification": {
+        "status": "unverified",
+        "checked_at": null,
+        "evidence": "Synthetic arithmetic fixture, not a real recommendation."
+      },
+      "sections": [],
+      "scores": {
+        "authority": 4,
+        "relevance": 3,
+        "practicality": 4,
+        "currency": 3,
+        "learner_fit": 3,
+        "accessibility": 3
+      },
+      "notes": "Scores are manufactured test inputs, not observed resource quality."
+    }
+  ]
+}

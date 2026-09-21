@@ -1,0 +1,156 @@
+{
+  "schema_version": "0.2",
+  "skill": "Python unit testing for small data-processing functions",
+  "mode": "verified",
+  "language": "zh-CN",
+  "budget_hours": 4,
+  "buffer_hours": 0.5,
+  "max_core_resources": 2,
+  "capabilities": [
+    {
+      "id": "c-python",
+      "title": "Write a Python function and run a script",
+      "requires": [],
+      "required": false
+    },
+    {
+      "id": "c-test",
+      "title": "Write and run a deterministic unit test",
+      "requires": [
+        "c-python"
+      ],
+      "required": true
+    },
+    {
+      "id": "c-boundaries",
+      "title": "Test boundary and invalid inputs",
+      "requires": [
+        "c-test"
+      ],
+      "required": true
+    },
+    {
+      "id": "c-isolation",
+      "title": "Isolate a dependency and test both output and calls",
+      "requires": [
+        "c-boundaries"
+      ],
+      "required": true
+    }
+  ],
+  "known_capabilities": [
+    "c-python"
+  ],
+  "selected_resource_ids": [
+    "r-unittest",
+    "r-mock",
+    "r-lab"
+  ],
+  "lessons": [
+    {
+      "id": "l01",
+      "title": "写出第一个可解释的单元测试",
+      "kind": "guided",
+      "capabilities": [
+        "c-test"
+      ],
+      "resource_ids": [
+        "r-unittest",
+        "r-lab"
+      ],
+      "section_refs": [
+        {
+          "resource_id": "r-unittest",
+          "section_id": "basic"
+        },
+        {
+          "resource_id": "r-unittest",
+          "section_id": "discovery"
+        },
+        {
+          "resource_id": "r-lab",
+          "section_id": "normalize"
+        }
+      ],
+      "hours": {
+        "input": 0.25,
+        "practice": 0.5,
+        "assessment": 0.25
+      },
+      "exercise": "为 normalize_scores 编写正常输入与边界值测试；再修改一个预期值，观察测试失败。",
+      "output": "my_tests/test_normalize.py and a short explanation of a deliberately failing assertion.",
+      "exit_criteria": [
+        "Explain arrange, act, and assert on your own test.",
+        "Run at least three independently written tests and explain one intentional failure."
+      ]
+    },
+    {
+      "id": "l02",
+      "title": "用错误输入检验实现边界",
+      "kind": "independent",
+      "capabilities": [
+        "c-boundaries"
+      ],
+      "resource_ids": [
+        "r-unittest",
+        "r-lab"
+      ],
+      "section_refs": [
+        {
+          "resource_id": "r-unittest",
+          "section_id": "raises"
+        },
+        {
+          "resource_id": "r-lab",
+          "section_id": "normalize"
+        }
+      ],
+      "hours": {
+        "input": 0.25,
+        "practice": 0.75,
+        "assessment": 0.25
+      },
+      "exercise": "从空白测试文件检查空列表、布尔值、字符串、非有限值、越界值和合法浮点数；先说明为何应接受或拒绝。",
+      "output": "An independently written invalid-input suite and one regression-test explanation.",
+      "exit_criteria": [
+        "Differentiate a wrong input type from an out-of-range numeric value.",
+        "Make a deliberate validation mutation and demonstrate that your test catches it."
+      ]
+    },
+    {
+      "id": "l03",
+      "title": "隔离数据来源并迁移到新问题",
+      "kind": "transfer",
+      "capabilities": [
+        "c-isolation"
+      ],
+      "resource_ids": [
+        "r-mock",
+        "r-lab"
+      ],
+      "section_refs": [
+        {
+          "resource_id": "r-mock",
+          "section_id": "mock-class"
+        },
+        {
+          "resource_id": "r-lab",
+          "section_id": "loader"
+        }
+      ],
+      "hours": {
+        "input": 0.25,
+        "practice": 0.75,
+        "assessment": 0.25
+      },
+      "exercise": "用 Mock 替代 loader，测试成功、超时和非法数据；随后实现并测试一个新的 median_from_loader。",
+      "output": "my_tests/test_loader.py, median_from_loader, and one paragraph distinguishing unit and integration testing.",
+      "exit_criteria": [
+        "Verify both returned value and loader invocation count.",
+        "Test propagation of TimeoutError without making a network request.",
+        "Pass independently designed odd/even-length median cases."
+      ]
+    }
+  ],
+  "notes": "Illustrative 4-hour planning estimate, not a guarantee of mastery. A learner is assumed to know basic Python. This is not a full RAG course."
+}
