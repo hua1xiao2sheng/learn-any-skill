@@ -1,0 +1,17 @@
+{
+  "skill": "REPLACE_WITH_TARGET_SKILL",
+  "outcome": "REPLACE_WITH_OBSERVABLE_CAPABILITY",
+  "baseline": [],
+  "unconfirmed_prerequisites": [],
+  "language": "zh-CN",
+  "budget_hours": null,
+  "deadline": null,
+  "constraints": {
+    "free_only": true,
+    "formats": [],
+    "hardware": "unspecified",
+    "stack": "unspecified"
+  },
+  "assumptions": [],
+  "tool_mode": "offline"
+}
