@@ -1,0 +1,8 @@
+{
+  "schema_version": "0.2",
+  "course_id": "REPLACE_WITH_COURSE_ID",
+  "updated_at": null,
+  "current_lesson_id": null,
+  "lesson_status": [],
+  "next_action": "Fill this checkpoint from actual learner activity; no work has been assessed yet."
+}
