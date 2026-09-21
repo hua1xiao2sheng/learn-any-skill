@@ -56,7 +56,7 @@ def _locator(value: Any, label: str, base_dir: Path | None) -> str:
     raw = text(value, label)
     if raw.startswith("repo:"):
         relative = raw[5:]
-        if not relative or relative.startswith(("/", "\\\\")) or "\\\\" in relative or ":" in relative:
+        if not relative or relative.startswith(("/", "\\")) or "\\" in relative or ":" in relative:
             raise DataError(f"{label}: repo locator must be a relative POSIX-style path")
         path = Path(relative)
         if ".." in path.parts:
